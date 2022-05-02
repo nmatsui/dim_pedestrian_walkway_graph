@@ -1,0 +1,19 @@
+{
+  "fileVersion": 1,
+  "contents": [
+    {
+      "url": "https://data.data4citizen.jp/dataset/d28e4474-cdf3-4948-a467-c9c4f378ef80/resource/e90fd8eb-c1ec-43aa-a1e1-99062fc41332/download/node202102.csv",
+      "name": "aizuwakamatsu_node202102.csv",
+      "preprocesses": [
+        "CMD:bash preprocess_command/node.bash"
+      ]
+    },
+    {
+      "url": "https://data.data4citizen.jp/dataset/d28e4474-cdf3-4948-a467-c9c4f378ef80/resource/20d0cf17-a0eb-4d02-a65f-0fc5581a2148/download/link202102.csv",
+      "name": "aizuwakamatsu_link202102.csv",
+      "preprocesses": [
+        "CMD:bash preprocess_command/link.bash"
+      ]
+    }
+  ]
+}
