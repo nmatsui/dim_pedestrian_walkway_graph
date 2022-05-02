@@ -1,6 +1,8 @@
 import csv
 from abc import ABCMeta, abstractmethod
 
+from importer.models import Link, Node
+
 
 class Executor(metaclass=ABCMeta):
     def __init__(self, config):
@@ -24,12 +26,14 @@ class CSVExecutor(Executor):
 
 class NodeCSVExecutor(CSVExecutor):
     def _process(self, row):
-        print(row)
+        node = Node(**{k: v for k, v in row.items() if k in Node.get_fields()})
+        print(node)
 
 
 class LinkCSVExecutor(CSVExecutor):
     def _process(self, row):
-        print(row)
+        link = Link(**{k: v for k, v in row.items() if k in Link.get_fields()})
+        print(link)
 
 
 def get_executor(executor_type, format_type):
