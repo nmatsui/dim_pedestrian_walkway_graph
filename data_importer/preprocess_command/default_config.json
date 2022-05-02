@@ -1,0 +1,5 @@
+{
+  "fiware_endpoint": "http://localhost:1026/v2/entities/",
+  "fiware_service": "pedestrian_walkway_graph",
+  "fiware_servicepath": "/fukushima/aizuwakamatsu"
+}
