@@ -12,7 +12,7 @@ class Node:
     def __post_init__(self):
         self.lat = float(self.lat)
         self.lon = float(self.lon)
-        self.floor = float(self.floor)
+        self.floor = float(self.floor or "99")  # Temporary implementaton for missing value
         self.in_out = int(self.in_out or "99")  # Temporary implementaton for missing value
 
     @classmethod
