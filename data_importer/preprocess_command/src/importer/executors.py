@@ -48,8 +48,8 @@ class NodeCSVExecutor(CSVExecutor):
 
     def _process(self, row):
         node = Node(**{k: v for k, v in row.items() if k in Node.get_fields()})
-        body = self.template.render(node=node)
-        self.post(body, id=node.node_id, type="Node")
+        body = self.template.render({"node": node, "type": self.config.fiware_node_type})
+        self.post(body, id=node.node_id, type=self.config.fiware_node_type)
 
 
 class LinkCSVExecutor(CSVExecutor):
@@ -59,8 +59,8 @@ class LinkCSVExecutor(CSVExecutor):
 
     def _process(self, row):
         link = Link(**{k: v for k, v in row.items() if k in Link.get_fields()})
-        body = self.template.render(link=link)
-        self.post(body, id=link.link_id, type="Link")
+        body = self.template.render({"link": link, "type": self.config.fiware_link_type})
+        self.post(body, id=link.link_id, type=self.config.fiware_link_type)
 
 
 def get_executor(executor_type, format_type):

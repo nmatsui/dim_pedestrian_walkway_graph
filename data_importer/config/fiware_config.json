@@ -1,5 +1,7 @@
 {
   "fiware_endpoint": "http://192.168.0.1:1026/v2/entities/",
   "fiware_service": "pedestrian_walkway_graph",
-  "fiware_servicepath": "/fukushima/aizuwakamatsu"
+  "fiware_servicepath": "/fukushima/aizuwakamatsu",
+  "fiware_node_type": "Node",
+  "fiware_link_type": "Link"
 }

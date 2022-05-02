@@ -7,6 +7,8 @@ class Config:
     fiware_endpoint: str
     fiware_service: str
     fiware_servicepath: str
+    fiware_node_type: str
+    fiware_link_type: str
 
 
 def parse_config(config_path):
