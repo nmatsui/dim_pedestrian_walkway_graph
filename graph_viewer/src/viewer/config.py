@@ -22,6 +22,7 @@ class MapConfig:
     map_top_right: List[float]
     resolution: float
     provider: str
+    node_radius: int
     line_width: int
     line_color: List[int]
     scale_color: List[int]

@@ -33,10 +33,10 @@ class MapRenderer:
                 continue
 
             p = (
-                node.x - self.config.map_config.line_width,
-                node.y - self.config.map_config.line_width,
-                node.x + self.config.map_config.line_width,
-                node.y + self.config.map_config.line_width,
+                node.x - self.config.map_config.node_radius,
+                node.y - self.config.map_config.node_radius,
+                node.x + self.config.map_config.node_radius,
+                node.y + self.config.map_config.node_radius,
             )
             draw.ellipse(p, fill=tuple(self.config.map_config.line_color))
 
