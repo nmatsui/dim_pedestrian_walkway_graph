@@ -37,7 +37,7 @@ class NGSIIterator:
         return self._buf.pop(0)
 
 
-def parse_data(config):
+def parse_data(config, strategy):
     transformer = CoordTransformer(config)
 
     nodes = dict()
@@ -75,7 +75,8 @@ def parse_data(config):
             models.ElevatorType(int(ngsi_link["elevator"]["value"])),
             models.Roof(int(ngsi_link["roof"]["value"])),
         )
-        links.append(link)
+        if strategy(link):
+            links.append(link)
 
     size = transformer.get_mapsize()
 
