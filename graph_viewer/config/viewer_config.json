@@ -17,7 +17,7 @@
     "line_width": 2,
     "line_color": [255, 51, 51],
     "scale_color": [16, 16, 16],
-    "scale_font_path": "/System/Library/Fonts/SFNSMono.ttf",
+    "scale_font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
     "scale_font_size": 20
   }
 }
