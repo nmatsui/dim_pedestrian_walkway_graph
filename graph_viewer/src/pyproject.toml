@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "graph_viewer"
+version = "0.1.0"
+description = ""
+authors = ["Nobuyuki Matsui <nobuyuki.matsui@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.27.1"
+dacite = "^1.6.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pyproject-flake8 = "^0.0.1-alpha.4"
+black = "^22.3.0"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 128
+max-complexity = 18
+ignore = "E203,E266,W503,"
+exclude = ".git,__pycache__,.venv"
+
+[tool.black]
+target-version = ['py39']
+line-length = 128
+
+[tool.isort]
+line_length = 128
+multi_line_output = 3
+include_trailing_comma = true
+known_local_folder=['config',]
