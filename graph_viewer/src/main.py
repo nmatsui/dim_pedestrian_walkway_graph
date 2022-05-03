@@ -17,7 +17,7 @@ def parse_args():
 def main(args):
     config = parse_config(args.config)
     size, nodes, links = parse_data(config)
-    MapRenderer(size).render(nodes, links, args.map_path)
+    MapRenderer(config, size).render(nodes, links, args.map_path)
 
 
 if __name__ == "__main__":

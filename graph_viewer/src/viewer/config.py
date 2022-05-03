@@ -21,6 +21,12 @@ class MapConfig:
     map_bottom_left: List[float]
     map_top_right: List[float]
     resolution: float
+    provider: str
+    line_width: int
+    line_color: List[int]
+    scale_color: List[int]
+    scale_font_path: str
+    scale_font_size: int
 
 
 @dataclass
