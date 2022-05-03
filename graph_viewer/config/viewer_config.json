@@ -6,5 +6,11 @@
     "node_type": "Node",
     "link_type": "Link",
     "limit": 100
+  },
+  "map_config": {
+    "base_origin_latlng": [36.0, 139.833333333],
+    "map_bottom_left": [37.48267818839442, 139.91035011969865],
+    "map_top_right": [37.51230312371472, 139.94064286168165],
+    "resolution": 1.6
   }
 }

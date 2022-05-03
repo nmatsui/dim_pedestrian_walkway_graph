@@ -1,5 +1,6 @@
 import json
 from dataclasses import dataclass
+from typing import List
 
 from dacite import from_dict
 
@@ -15,8 +16,17 @@ class FiwareConfig:
 
 
 @dataclass
+class MapConfig:
+    base_origin_latlng: List[float]
+    map_bottom_left: List[float]
+    map_top_right: List[float]
+    resolution: float
+
+
+@dataclass
 class Config:
     fiware_config: FiwareConfig
+    map_config: MapConfig
 
 
 def parse_config(config_path):

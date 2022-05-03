@@ -8,6 +8,8 @@ authors = ["Nobuyuki Matsui <nobuyuki.matsui@gmail.com>"]
 python = "^3.10"
 requests = "^2.27.1"
 dacite = "^1.6.0"
+numpy = "^1.22.3"
+Pillow = "^9.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -26,7 +28,7 @@ ignore = "E203,E266,W503,"
 exclude = ".git,__pycache__,.venv"
 
 [tool.black]
-target-version = ['py39']
+target-version = ['py310']
 line-length = 128
 
 [tool.isort]
